@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<launch>
+    <node pkg="map_server" type="map_server" name="map_servere" args="/home/micro/ros/src/multi_planner/map/testmap.yaml">
+    </node>
+
+    <node pkg="rviz" type="rviz" name="rviz" args="/home/micro/ros/src/multi_planner/multi_planner.rviz">
+
+    </node>
+
+    <node pkg="multi_planner" type="multi_planner_node" name="multi_planner_node">
+        
+    </node>
+
+</launch>
