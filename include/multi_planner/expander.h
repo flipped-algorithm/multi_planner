@@ -2,7 +2,9 @@
 #include <iostream>
 #include <nav_msgs/OccupancyGrid.h>
 #include <queue>
-#define INF_VALUE  100000
+#define INF_VALUE      100000
+//obstacle value
+#define CRITICAL_VALUE 50     
 
 using namespace std;
 class Expander
@@ -23,7 +25,6 @@ public:
         delete map_;
         delete costs_;
     }
-
     inline uint32_t to_index(uint16_t x, uint16_t y){
         return x + y * nx_;
     }

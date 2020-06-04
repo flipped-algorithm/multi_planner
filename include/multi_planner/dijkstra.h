@@ -11,11 +11,8 @@ public:
     DijkstraExpantion();
     ~DijkstraExpantion();
     bool plan(uint16_t sx,uint16_t sy,uint16_t gx,uint16_t gy,nav_msgs::Path &res);
-    bool get_path();
+    bool get_path(uint16_t sx,uint16_t sy,uint16_t gx,uint16_t gy,nav_msgs::Path &res);
     float get_cost(uint32_t s,uint32_t g);
-
-
-    
 };
 
 

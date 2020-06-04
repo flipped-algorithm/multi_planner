@@ -53,7 +53,7 @@ void PathPlanner::exec(const nav_msgs::OccupancyGridConstPtr &grid)
     da_path.header.frame_id="/map";
     da_path.header.stamp=ros::Time::now();
     ROS_INFO("start dijkstra planning...");
-    da.plan(0 ,0,9,9,da_path);
+    da.plan(20 ,260,20,320,da_path);
     ROS_INFO("dijkstra planning finished.");
     pub_dijkstra_.publish(da_path);
 
